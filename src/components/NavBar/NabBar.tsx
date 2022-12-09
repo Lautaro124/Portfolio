@@ -7,7 +7,7 @@ const NabBar = () => {
   const [nav, setNav] = useState<boolean>(false)
 
   return (
-    <div className='flex justify-between items-center w-full px-4 h-20 text-white fixed'>
+    <div className='flex justify-between items-center w-full px-4 h-20 text-white fixed bg-black'>
       <h1 className="text-5xl font-signature ml-2">
         La
       </h1>
