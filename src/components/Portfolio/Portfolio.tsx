@@ -1,7 +1,5 @@
-import Moneta from '../../assets/images/Moneta.png'
 import GrupalProject from '../../assets/images/ProyectoGrupal.jpeg'
 import PiDogs from '../../assets/images/PiDogs.png'
-import PG from '../../assets/images/PG.png'
 import { Element } from 'react-scroll'
 
 const Portfolio = () => {
