@@ -1,8 +1,10 @@
 import { FC } from 'react'
+import { Element } from 'react-scroll'
+
 
 const Contact: FC = () => {
   return (
-    <div
+    <Element
       name='Contact'
       className='w-full h-screen bg-gradient-to-b from-black to-gray-800 p-4 text-white'
     >
@@ -43,7 +45,7 @@ const Contact: FC = () => {
           </form>
         </div>
       </div>
-    </div>
+    </Element>
   )
 }
 
