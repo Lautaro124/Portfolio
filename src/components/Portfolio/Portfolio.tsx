@@ -8,21 +8,11 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      source: PG,
-      href: 'https://www.promopg.com/'
-    },
-    {
-      id: 2,
-      source: Moneta,
-      href: 'https://play.google.com/store/apps/details?id=com.moneta.android&hl=es'
-    },
-    {
-      id: 3,
       source: GrupalProject,
       href: 'https://recipecalendar.vercel.app/'
     },
     {
-      id: 4,
+      id: 2,
       source: PiDogs,
       href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_video-react-express-activity-6836343147270856704-rrEz?utm_source=share&utm_medium=member_desktop'
     }
