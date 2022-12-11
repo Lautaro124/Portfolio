@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import DesktopNavSection from '../DesktopNavSection/DesktopNavSection'
 import MobileNavSection from '../MobileNavSection/MobileNavSection'
@@ -19,7 +19,7 @@ const NabBar = () => {
         }
       </div>
       <DesktopNavSection />
-      { nav && ( <MobileNavSection /> ) }
+      { nav && ( <MobileNavSection onClick={() => setNav(!nav)} /> ) }
     </div>
   )
 }
