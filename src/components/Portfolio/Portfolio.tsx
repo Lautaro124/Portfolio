@@ -9,18 +9,22 @@ const Portfolio = () => {
     {
       id: 1,
       source: PG,
+      href: 'https://www.promopg.com/'
     },
     {
       id: 2,
       source: Moneta,
+      href: 'https://play.google.com/store/apps/details?id=com.moneta.android&hl=es'
     },
     {
       id: 3,
       source: GrupalProject,
+      href: 'https://recipecalendar.vercel.app/'
     },
     {
       id: 4,
       source: PiDogs,
+      href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_video-react-express-activity-6836343147270856704-rrEz?utm_source=share&utm_medium=member_desktop'
     }
   ]
 
@@ -37,10 +41,14 @@ const Portfolio = () => {
         {
           projects.map(project =>(
               <div key={project.id} className='shadow-md shadow-gray-600 rounded-lg'>
-                <img src={project.source} alt="" className=' rounded-md duration-200 hover:scale-105'/>
-                <div className='flex items-center justify-center'>
-                  <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>Demo</button>
-                </div>
+                <a href={project.href} target='_blank'>
+                  <img src={project.source} alt="" className=' rounded-md duration-200 hover:scale-105'/>
+                  <div className='flex items-center justify-center'>
+                    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>
+                        View
+                    </button>
+                  </div>
+                </a>
               </div>
           ))
         }
