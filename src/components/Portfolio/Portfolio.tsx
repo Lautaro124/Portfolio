@@ -1,5 +1,6 @@
 import GrupalProject from '../../assets/images/ProyectoGrupal.jpeg'
 import PiDogs from '../../assets/images/PiDogs.png'
+import LoginApp from '../../assets/images/LoginApp.png'
 import { Element } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
@@ -15,6 +16,12 @@ const Portfolio = () => {
       id: 2,
       source: PiDogs,
       href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_video-react-express-activity-6836343147270856704-rrEz?utm_source=share&utm_medium=member_desktop'
+    },
+    {
+      id: 3,
+      source:LoginApp,
+      href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_react-javascript-github-activity-7010739738189967360-K9pR?utm_source=share&utm_medium=member_desktop'
+
     }
   ]
 
