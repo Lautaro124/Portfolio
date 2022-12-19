@@ -8,11 +8,15 @@ const About = () => {
           <p className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
         </div>
         <p className='text-xl mt-20'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates velit, et pariatur, enim officiis a dolorem quam exercitationem eum explicabo inventore voluptate soluta eos perspiciatis recusandae dolorum libero doloremque beatae. Iste inventore commodi hic aliquid amet necessitatibus rerum veritatis dolorem fuga eaque, saepe asperiores tempore harum assumenda voluptate autem.
+          My name is Lautaro Gonzalez, FrontEnd and Mobile developer. I mostly code in React.<br/>
+          I love programming, especially when I learn new things, it's a constant innovation.
         </p>
         <br />
         <p className='text-xl'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At maiores nemo ad quis eius atque, voluptatibus dignissimos iste, id similique ut a architecto facere, quam perferendis natus amet sunt enim debitis esse possimus sed! Laudantium libero distinctio rerum minima nihil vitae nobis! Explicabo vero eius assumenda asperiores laboriosam veritatis ex.
+        Mi path began a little more than 5 years ago on high school. I started studying C, then I moved onto Javascript, along with a lot of technical knowledge.<br/>
+        Then came Henry, a bootcamp that brought me many web design and backend developing tools.<br/>
+        In 2021 I prioritized React and that got me into my first formal working experience, in which I've been for a year now.<br/>
+        Those who shared this path with me had described me as proactive, always looking to learn more. I'm curious and I enjoy working in a team, always looking for positive interactions.
         </p>
       </div>
     </Element>
