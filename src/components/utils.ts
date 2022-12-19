@@ -18,7 +18,7 @@ export const links: Link[] = [
   },
   {
     id: 3,
-    link: 'Experience',
+    link: 'Technologies',
   },
   {
     id: 4,

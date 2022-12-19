@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "portfolio": "Portafolio",
+    "skills": "Tecnologias",
+    "contact": "Contacta me"
+  },
+  "home": {
+    "title": "Soy un dearrollador React",
+    "subtitle_1": "Soy una persona proactiva, solidaria y responsable.",
+    "subtitle_2": "Siempre estoy buscando mejorar en lo que hago constantemente y ayudar a mis compañeros en el camino."
+  },
+  "about": {
+    "first_part": "Soy Lautaro González, desarrollador FrontEnd y Mobile. Principalmente manejo React.",
+    "second_part": "Me encanta la programación, en especial descubrir nuevos conocimientos, en una innovación constante.",
+    "third_part": "Mi camino empezó hace más de cinco años en la secundaria. Empecé a estudiar lenguaje C, que evolucionó en Javascript, acompañado de múltiples conocimientos técnicos.",
+    "quarter_part":"Después llegó el turno de Henry, un bootcamp, que me brindó herramientas en diseño web y desarrollo backend.",
+    "fifth_part": "En 2021 prioricé React y eso me llevo a mi primera experiencia laboral formal, con ya un año a la fecha.",
+    "sixty_part": "Quienes han compartido este camino me describen como una persona proactiva, que busca constantemente aprender más. Soy alguien curioso, que disfruta trabajar en equipo, buscando interacciones positivas."
+  },
+  "portfolio": {
+    "check": "Mira algo de mi trabajo",
+    "view": "Ver"
+  },
+  "technologies": "Estas son las tecnologias que manejo",
+  "contact": {
+    "explain": "Escriba su mensaje si quisiear contactar conmigo",
+    "name": "Ingrese su nombre",
+    "email": "Ingrese su mail",
+    "message": "Ingrese su mensaje"
+  }
+}
