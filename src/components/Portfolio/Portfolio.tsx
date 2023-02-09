@@ -1,6 +1,7 @@
 import GrupalProject from '../../assets/images/ProyectoGrupal.jpeg'
 import PiDogs from '../../assets/images/PiDogs.png'
 import LoginApp from '../../assets/images/LoginApp.png'
+import Twitch from '../../assets/images/twitch.png'
 import { Element } from 'react-scroll'
 import { useTranslation } from 'react-i18next'
 
@@ -19,9 +20,13 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      source:LoginApp,
+      source: LoginApp,
       href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_react-javascript-github-activity-7010739738189967360-K9pR?utm_source=share&utm_medium=member_desktop'
-
+    },
+    {
+      id: 4,
+      source: Twitch,
+      href: 'https://twitch-ten.vercel.app/'
     }
   ]
 
