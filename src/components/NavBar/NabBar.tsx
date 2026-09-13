@@ -20,7 +20,11 @@ const NabBar = () => {
     toggleRef.current?.focus()
   }
 
-  /* Escape closes the mobile menu and the page stays locked while it is open. */
+  /*
+   * Escape closes the mobile menu and the page stays locked while it is open.
+   * Growing past the `md` breakpoint also closes it: the panel is `md:hidden`,
+   * so leaving it open on desktop would keep the scroll lock with no way out.
+   */
   useEffect(() => {
     if (!navOpen) return
 
@@ -28,11 +32,18 @@ const NabBar = () => {
       if (event.key === 'Escape') closeNav()
     }
 
+    const desktop = window.matchMedia('(min-width: 768px)')
+    const onBreakpointChange = () => {
+      if (desktop.matches) setNavOpen(false)
+    }
+
     document.addEventListener('keydown', onKeyDown)
+    desktop.addEventListener('change', onBreakpointChange)
     document.body.style.overflow = 'hidden'
 
     return () => {
       document.removeEventListener('keydown', onKeyDown)
+      desktop.removeEventListener('change', onBreakpointChange)
       document.body.style.overflow = ''
     }
   }, [navOpen])
@@ -84,8 +95,8 @@ const NabBar = () => {
           <button
             type="button"
             ref={toggleRef}
-            onClick={() => setNavOpen(!navOpen)}
-            className="z-10 p-2 text-gray-200 md:hidden"
+            onClick={() => setNavOpen(open => !open)}
+            className="relative z-10 p-2 text-gray-200 md:hidden"
             aria-label={(navOpen ? t('nav.close_menu') : t('nav.open_menu')) as string}
             aria-expanded={navOpen}
             aria-controls="mobile-menu"
@@ -95,7 +106,7 @@ const NabBar = () => {
         </div>
       </div>
 
-      <MobileNavSection open={navOpen} onNavigate={closeNav} />
+      <MobileNavSection open={navOpen} onNavigate={closeNav} onClose={closeNav} />
     </header>
   )
 }

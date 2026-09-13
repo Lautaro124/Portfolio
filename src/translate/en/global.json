@@ -54,6 +54,12 @@
     "visit": "Visit tratoagenda.com",
     "view": "View project",
     "new_tab": "(opens in a new tab)",
+    "more_label": "More projects",
+    "more_intro": "Earlier work, each with a link to its demo.",
+    "cta_live": "Open live demo",
+    "cta_linkedin": "Watch demo on LinkedIn",
+    "tag_live": "Live demo",
+    "tag_linkedin": "LinkedIn demo",
     "trato": {
       "name": "Trato Agenda",
       "tagline": "WhatsApp appointment management synced with Google Calendar.",

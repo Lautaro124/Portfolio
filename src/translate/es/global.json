@@ -54,6 +54,12 @@
     "visit": "Visitar tratoagenda.com",
     "view": "Ver proyecto",
     "new_tab": "(se abre en una pestaña nueva)",
+    "more_label": "Más proyectos",
+    "more_intro": "Trabajos anteriores, cada uno con el enlace a su demo.",
+    "cta_live": "Abrir demo en vivo",
+    "cta_linkedin": "Ver demo en LinkedIn",
+    "tag_live": "Demo en vivo",
+    "tag_linkedin": "Demo en LinkedIn",
     "trato": {
       "name": "Trato Agenda",
       "tagline": "Gestión de turnos por WhatsApp sincronizada con Google Calendar.",
