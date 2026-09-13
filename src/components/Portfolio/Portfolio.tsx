@@ -1,62 +1,145 @@
-import GrupalProject from '../../assets/images/ProyectoGrupal.jpeg'
-import PiDogs from '../../assets/images/PiDogs.png'
-import LoginApp from '../../assets/images/LoginApp.png'
-import Twitch from '../../assets/images/twitch.png'
-import { Element } from 'react-scroll'
+import { FaWhatsapp, FaGoogle, FaRegBell, FaQrcode, FaExternalLinkAlt } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import GrupalProject from '../../assets/images/ProyectoGrupal.webp'
+import PiDogs from '../../assets/images/PiDogs.webp'
+import LoginApp from '../../assets/images/LoginApp.webp'
+import Twitch from '../../assets/images/twitch.webp'
+import SectionHeading from '../SectionHeading/SectionHeading'
+import { TRATO_AGENDA_URL, containerClass, primaryButtonClass, sectionClass } from '../utils'
+
+type Project = {
+  id: string
+  source: string
+  href: string
+  nameKey: string
+  descriptionKey: string
+  altKey: string
+}
+
+const projects: Project[] = [
+  {
+    id: 'recipe',
+    source: GrupalProject,
+    href: 'https://recipecalendar.vercel.app/',
+    nameKey: 'projects.recipe.name',
+    descriptionKey: 'projects.recipe.description',
+    altKey: 'projects.recipe.image_alt',
+  },
+  {
+    id: 'pidogs',
+    source: PiDogs,
+    href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_video-react-express-activity-6836343147270856704-rrEz?utm_source=share&utm_medium=member_desktop',
+    nameKey: 'projects.pidogs.name',
+    descriptionKey: 'projects.pidogs.description',
+    altKey: 'projects.pidogs.image_alt',
+  },
+  {
+    id: 'login',
+    source: LoginApp,
+    href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_react-javascript-github-activity-7010739738189967360-K9pR?utm_source=share&utm_medium=member_desktop',
+    nameKey: 'projects.login.name',
+    descriptionKey: 'projects.login.description',
+    altKey: 'projects.login.image_alt',
+  },
+  {
+    id: 'twitch',
+    source: Twitch,
+    href: 'https://twitch-ten.vercel.app/',
+    nameKey: 'projects.twitch.name',
+    descriptionKey: 'projects.twitch.description',
+    altKey: 'projects.twitch.image_alt',
+  },
+]
 
 const Portfolio = () => {
-  const [ t ] = useTranslation('global')
-  const projects = [
-    {
-      id: 1,
-      source: GrupalProject,
-      href: 'https://recipecalendar.vercel.app/'
-    },
-    {
-      id: 2,
-      source: PiDogs,
-      href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_video-react-express-activity-6836343147270856704-rrEz?utm_source=share&utm_medium=member_desktop'
-    },
-    {
-      id: 3,
-      source: LoginApp,
-      href: 'https://www.linkedin.com/posts/lautaro-gabriel-gonzalez_react-javascript-github-activity-7010739738189967360-K9pR?utm_source=share&utm_medium=member_desktop'
-    },
-    {
-      id: 4,
-      source: Twitch,
-      href: 'https://twitch-ten.vercel.app/'
-    }
+  const [t] = useTranslation('global')
+
+  const featureIcons = [
+    { id: 'whatsapp', icon: <FaWhatsapp size={20} aria-hidden /> },
+    { id: 'calendar', icon: <FaGoogle size={18} aria-hidden /> },
+    { id: 'reminder', icon: <FaRegBell size={18} aria-hidden /> },
+    { id: 'qr', icon: <FaQrcode size={18} aria-hidden /> },
   ]
 
   return (
-    <Element name='Portfolio' className='bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
-          <p className='text-4xl font-bold inline border-b-4 border-gray-500'>{ t('nav.portfolio') }</p>
-          <p className='py-6'>
-            { t('portfolio.check') }
+    <section
+      id="projects"
+      aria-labelledby="projects-title"
+      className={`${sectionClass} bg-gradient-to-b from-black to-gray-900 text-white`}
+    >
+      <div className={containerClass}>
+        <SectionHeading id="projects" title={t('projects.title')} intro={t('projects.intro')} />
+
+        <article className="mb-12 rounded-xl border border-cyan-500/50 bg-gradient-to-br from-gray-900 to-black p-6 shadow-lg shadow-cyan-500/10 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+            {t('projects.featured_label')}
           </p>
-        </div>
-        <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-        {
-          projects.map(project =>(
-              <div key={project.id} className='shadow-md shadow-gray-600 rounded-lg'>
-                <a href={project.href} target='_blank'>
-                  <img src={project.source} alt="" className=' rounded-md duration-200 hover:scale-105'/>
-                  <div className='flex items-center justify-center'>
-                    <button className='w-1/2 px-6 py-3 m-4 hover:scale-105 duration-200'>
-                      { t('portfolio.view') }
-                    </button>
-                  </div>
+          <h3 className="pt-2 text-2xl font-bold sm:text-3xl">{t('projects.trato.name')}</h3>
+          <p className="pt-1 text-lg text-gray-200">{t('projects.trato.tagline')}</p>
+
+          <div className="flex flex-wrap gap-3 pt-5" aria-hidden>
+            {featureIcons.map(feature => (
+              <span
+                key={feature.id}
+                className="flex h-10 w-10 items-center justify-center rounded-md border border-gray-600 bg-black/40 text-cyan-300"
+              >
+                {feature.icon}
+              </span>
+            ))}
+          </div>
+
+          <p className="pt-5 text-gray-300">{t('projects.trato.description')}</p>
+          <p className="pt-3 text-gray-300">{t('projects.trato.setup')}</p>
+          <p className="pt-3 text-gray-300">{t('projects.trato.pricing')}</p>
+
+          <a
+            href={TRATO_AGENDA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${primaryButtonClass} mt-6`}
+          >
+            {t('projects.visit')}
+            <FaExternalLinkAlt size={14} aria-hidden />
+            <span className="sr-only"> {t('projects.new_tab')}</span>
+          </a>
+        </article>
+
+        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {projects.map(project => (
+            <li
+              key={project.id}
+              className="flex flex-col overflow-hidden rounded-lg border border-gray-700 bg-white/5"
+            >
+              <img
+                src={project.source}
+                alt={t(project.altKey) as string}
+                width={1100}
+                height={746}
+                loading="lazy"
+                decoding="async"
+                className="aspect-[3/2] w-full object-cover object-top"
+              />
+              <div className="flex flex-1 flex-col p-4">
+                <h3 className="text-lg font-bold">{t(project.nameKey)}</h3>
+                <p className="flex-1 pt-2 text-sm text-gray-300">{t(project.descriptionKey)}</p>
+                <a
+                  href={project.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 font-semibold text-cyan-300 hover:text-cyan-200 hover:underline"
+                >
+                  {t('projects.view')}
+                  <FaExternalLinkAlt size={12} aria-hidden />
+                  <span className="sr-only">
+                    : {t(project.nameKey)} {t('projects.new_tab')}
+                  </span>
                 </a>
               </div>
-          ))
-        }
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
-    </Element>
+    </section>
   )
 }
 

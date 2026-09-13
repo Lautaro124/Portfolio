@@ -1,33 +1,116 @@
 {
+  "skip_link": "Skip to main content",
   "nav": {
+    "aria_label": "Main navigation",
+    "open_menu": "Open navigation menu",
+    "close_menu": "Close navigation menu",
+    "language": "Language",
+    "spanish": "Switch to Spanish",
+    "english": "Switch to English",
     "home": "Home",
     "about": "About",
-    "portfolio": "Portfolio",
-    "skills": "technologies",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Technologies",
     "contact": "Contact"
   },
   "home": {
-    "title": "I am React developer",
-    "subtitle_1": "I am proactive, considerate and responsible.",
-    "subtitle_2": "I am always looking to improve in my field, and help my colleagues."
-    },
+    "eyebrow": "Hi, I'm",
+    "name": "Lautaro González",
+    "role": "Frontend & Fullstack Developer",
+    "summary": "4+ years building web and mobile applications with React, Next.js (App Router), TypeScript and React Native, and APIs with NestJS and Node.js.",
+    "cta_projects": "View projects",
+    "cta_contact": "Get in touch",
+    "cta_resume": "Download CV (PDF)",
+    "photo_alt": "Portrait of Lautaro González"
+  },
   "about": {
-    "first_part": "My name is Lautaro Gonzalez, FrontEnd and Mobile developer. I mostly code in React",
-    "second_part": "I love programming, especially when I learn new things, it's a constant innovation.",
-    "third_part": "Mi path began a little more than 5 years ago on high school. I started studying C, then I moved onto Javascript, along with a lot of technical knowledge.",
-    "quarter_part":"Then came Henry, a bootcamp that brought me many web design and backend developing tools.",
-    "fifth_part": "In 2021 I prioritized React and that got me into my first formal working experience, in which I've been for a year now.",
-    "sixty_part": "Those who shared this path with me had described me as proactive, always looking to learn more. I'm curious and I enjoy working in a team, always looking for positive interactions."
+    "title": "About me",
+    "first_part": "I'm Lautaro González, a Frontend and Fullstack developer. I work mainly with React, Next.js and TypeScript on the frontend, React Native on mobile, and NestJS on Node.js on the backend.",
+    "second_part": "My path started in high school studying C and continued with JavaScript. I later took the Henry bootcamp, which added web design and backend development tools, and in 2021 I started working professionally with a focus on React.",
+    "third_part": "Today I work as a Full-Stack developer at Konecta. I enjoy working in a team, learning new technologies and keeping code quality in check with tools such as Sentry and SonarQube.",
+    "languages_title": "Languages",
+    "languages_value": "Native Spanish · Professional working English",
+    "focus_title": "Current focus",
+    "focus_value": "Web and mobile apps with React, Next.js App Router, TypeScript and React Native",
+    "backend_title": "Backend",
+    "backend_value": "NestJS and Node.js with PostgreSQL, MongoDB, Redis and RabbitMQ"
   },
-  "portfolio": {
-    "check": "Check out some of my work right here",
-    "view": "View"
+  "experience": {
+    "title": "Experience",
+    "intro": "Professional track record as a Full-Stack developer.",
+    "present": "Present",
+    "konecta_role": "Full-Stack Developer",
+    "konecta_period": "Apr 2024 – Present",
+    "grelec_role": "Full-Stack React Native Developer",
+    "grelec_period": "Aug 2023 – Jan 2024",
+    "ctl_role": "Full-Stack Developer",
+    "ctl_period": "Dec 2021 – Aug 2023"
   },
-  "technologies": "These are the technologies I have worked with",
+  "projects": {
+    "title": "Projects",
+    "intro": "A selection of products and projects I have worked on.",
+    "featured_label": "Featured project",
+    "visit": "Visit tratoagenda.com",
+    "view": "View project",
+    "new_tab": "(opens in a new tab)",
+    "trato": {
+      "name": "Trato Agenda",
+      "tagline": "WhatsApp appointment management synced with Google Calendar.",
+      "description": "A web product for appointment management: clients write on WhatsApp, an assistant proposes free slots, confirms the booking and sends a reminder. The schedule syncs with Google Calendar.",
+      "setup": "Setup: sign in with Google and scan the WhatsApp QR code.",
+      "pricing": "Per its pricing page: a first free month and then ARS 20,000 per month."
+    },
+    "recipe": {
+      "name": "Recipe Calendar",
+      "description": "Recipes and calendar web app built as a group project and deployed on Vercel.",
+      "image_alt": "Screenshot of the Recipe Calendar app"
+    },
+    "pidogs": {
+      "name": "PI Dogs",
+      "description": "Dogs application built with React and Express. Demo published on LinkedIn.",
+      "image_alt": "Screenshot of the PI Dogs app"
+    },
+    "login": {
+      "name": "Login App",
+      "description": "Authentication application built with React. Demo published on LinkedIn.",
+      "image_alt": "Screenshot of the Login App"
+    },
+    "twitch": {
+      "name": "Twitch App",
+      "description": "Twitch-style web application deployed on Vercel.",
+      "image_alt": "Screenshot of the Twitch App"
+    }
+  },
+  "skills": {
+    "title": "Technologies",
+    "intro": "These are the technologies I work with.",
+    "frontend": "Frontend & Mobile",
+    "backend": "Backend",
+    "data": "Data & infrastructure",
+    "quality": "Quality & tooling"
+  },
   "contact": {
-    "explain": "Submit the form below to get in touch with me",
-    "name": "Enter your name",
-    "email": "Enter your email",
-    "message": "Enter your message"
+    "title": "Contact",
+    "explain": "Want to work together or have a question? Send me a message and I'll get back to you.",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "email_placeholder": "you@email.com",
+    "message": "Message",
+    "message_placeholder": "Tell me how I can help",
+    "submit": "Send message",
+    "direct": "You can also reach me directly:"
+  },
+  "social": {
+    "title": "Social and contact links",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "mail": "Email",
+    "resume": "CV"
+  },
+  "footer": {
+    "rights": "Built with React, TypeScript and Tailwind CSS.",
+    "back_to_top": "Back to top"
   }
 }

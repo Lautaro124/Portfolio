@@ -1,32 +1,37 @@
 import { FC } from 'react'
+import { useTranslation } from 'react-i18next'
 import { links } from '../utils'
-import { Link } from 'react-scroll'
 
 type Props = {
-  onClick: () => void
+  open: boolean
+  onNavigate: () => void
 }
 
-const MobileNavSection: FC<Props> = ({ onClick }) => {
+const MobileNavSection: FC<Props> = ({ open, onNavigate }) => {
+  const [t] = useTranslation('global')
+
+  if (!open) return null
+
   return (
-    <>
-    <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500'>
-      {
-        links.map(link => (
-          <li
-            key={link.id}
-            className='px-4 cursor-pointer capitalize font-medium py-6 text-4xl'>
-            <Link 
-              onClick={onClick}
-              to={link.link}
-              smooth 
-              duration={600}>
-                {link.link}
-            </Link>
+    <nav
+      id="mobile-menu"
+      aria-label={t('nav.aria_label') as string}
+      className="fixed inset-0 top-20 z-40 overflow-y-auto bg-gradient-to-b from-black to-gray-900 md:hidden"
+    >
+      <ul className="flex flex-col items-center justify-center py-8 text-gray-100">
+        {links.map(link => (
+          <li key={link.id} className="w-full text-center">
+            <a
+              href={`#${link.id}`}
+              onClick={onNavigate}
+              className="block px-4 py-5 text-3xl font-medium transition-colors duration-200 hover:text-cyan-300"
+            >
+              {t(link.labelKey)}
+            </a>
           </li>
-        ))
-      }
-    </ul>
-    </>
+        ))}
+      </ul>
+    </nav>
   )
 }
 

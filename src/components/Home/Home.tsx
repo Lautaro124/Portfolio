@@ -1,39 +1,56 @@
-import ProfileImage from '../../assets/images/me.jpeg'
 import { RiArrowRightSLine } from 'react-icons/ri'
-import { Link, Element } from 'react-scroll'
+import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { useTranslation } from 'react-i18next'
+import ProfileImage from '../../assets/images/me.webp'
+import { RESUME_URL, primaryButtonClass, secondaryButtonClass } from '../utils'
 
 const Home = () => {
-  const [ t ] = useTranslation('global')
+  const [t] = useTranslation('global')
 
   return (
-    <Element name='Home' className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800'>
-      <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
-        <div className='flex flex-col justify-center h-full'>
-          <h2 className='text-4xl sm:text-7xl font-bold text-white'>
-            { t('home.title') }
-          </h2>
-          <p className='text-gray-500 py-4 max-w-md'>
-            { t('home.subtitle_1') }<br />
-            { t('home.subtitle_2') }
+    <section
+      id="home"
+      aria-labelledby="home-title"
+      className="w-full bg-gradient-to-b from-black via-black to-gray-900 px-4 pt-28 pb-20 sm:pt-32"
+    >
+      <div className="mx-auto flex max-w-screen-lg flex-col-reverse items-center gap-10 md:flex-row md:gap-12">
+        <div className="flex w-full flex-col md:w-3/5">
+          <p className="text-lg font-medium text-cyan-300">{t('home.eyebrow')}</p>
+          <h1 id="home-title" className="text-4xl font-bold text-white sm:text-6xl">
+            {t('home.name')}
+          </h1>
+          <p className="pt-2 text-2xl font-semibold text-gray-200 sm:text-3xl">
+            {t('home.role')}
           </p>
-          <div>
-            <Link to='Portfolio' smooth duration={500} className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
-              { t('nav.portfolio') }
-              <span className='group-hover:rotate-90 duration-300'>
-                <RiArrowRightSLine size={25} className='ml-1'/>
-              </span>
-            </Link>
+          <p className="max-w-xl py-6 text-lg text-gray-300">{t('home.summary')}</p>
+
+          <div className="flex flex-wrap gap-4">
+            <a href="#projects" className={primaryButtonClass}>
+              {t('home.cta_projects')}
+              <RiArrowRightSLine size={24} aria-hidden />
+            </a>
+            <a href="#contact" className={secondaryButtonClass}>
+              {t('home.cta_contact')}
+            </a>
+            <a href={RESUME_URL} download className={secondaryButtonClass}>
+              {t('home.cta_resume')}
+              <HiOutlineDocumentDownload size={22} aria-hidden />
+            </a>
           </div>
         </div>
-        <div className='w-full md:w-2/3'>
-          <img 
-            src={ProfileImage} 
-            alt='My photo' 
-            className='rounded-2xl mx-auto w-full md:w-1/1'/>
+
+        <div className="w-2/3 sm:w-1/2 md:w-2/5">
+          <img
+            src={ProfileImage}
+            alt={t('home.photo_alt') as string}
+            width={760}
+            height={795}
+            decoding="async"
+            className="mx-auto w-full rounded-2xl border border-gray-800 shadow-lg shadow-black/50"
+          />
         </div>
       </div>
-    </Element>
+    </section>
   )
 }
 

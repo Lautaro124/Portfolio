@@ -1,26 +1,24 @@
+import { useTranslation } from 'react-i18next'
 import { links } from '../utils'
-import { Link } from 'react-scroll'
 
 const DesktopNavSection = () => {
+  const [t] = useTranslation('global')
+
   return (
-    <>
-      <ul className='hidden md:flex'>
-        {
-          links.map(link => (
-            <Link
-              key={link.id}
-              to={link.link}
-              smooth
-              duration={500}>
-              <li
-                className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>
-                {link.link}
-              </li>
-            </Link>
-          ))
-        }
+    <nav aria-label={t('nav.aria_label') as string} className="hidden md:block">
+      <ul className="flex items-center">
+        {links.map(link => (
+          <li key={link.id}>
+            <a
+              href={`#${link.id}`}
+              className="block px-4 py-2 font-medium text-gray-200 transition-colors duration-200 hover:text-cyan-300"
+            >
+              {t(link.labelKey)}
+            </a>
+          </li>
+        ))}
       </ul>
-    </>
+    </nav>
   )
 }
 

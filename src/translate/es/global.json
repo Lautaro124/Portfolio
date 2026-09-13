@@ -1,33 +1,116 @@
 {
+  "skip_link": "Ir al contenido principal",
   "nav": {
+    "aria_label": "Navegación principal",
+    "open_menu": "Abrir menú de navegación",
+    "close_menu": "Cerrar menú de navegación",
+    "language": "Idioma",
+    "spanish": "Cambiar a español",
+    "english": "Cambiar a inglés",
     "home": "Inicio",
-    "about": "Sobre mi",
-    "portfolio": "Portafolio",
-    "skills": "Tecnologias",
-    "contact": "Contacta me"
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Tecnologías",
+    "contact": "Contacto"
   },
   "home": {
-    "title": "Soy un desarrollador React",
-    "subtitle_1": "Soy una persona proactiva, solidaria y responsable.",
-    "subtitle_2": "Siempre estoy buscando mejorar en lo que hago constantemente y ayudar a mis compañeros en el camino."
+    "eyebrow": "Hola, soy",
+    "name": "Lautaro González",
+    "role": "Desarrollador Frontend & Fullstack",
+    "summary": "Más de 4 años construyendo aplicaciones web y móviles con React, Next.js (App Router), TypeScript y React Native, y APIs con NestJS y Node.js.",
+    "cta_projects": "Ver proyectos",
+    "cta_contact": "Contactarme",
+    "cta_resume": "Descargar CV (PDF)",
+    "photo_alt": "Retrato de Lautaro González"
   },
   "about": {
-    "first_part": "Soy Lautaro González, desarrollador FrontEnd y Mobile. Principalmente manejo React.",
-    "second_part": "Me encanta la programación, en especial descubrir nuevos conocimientos, en una innovación constante.",
-    "third_part": "Mi camino empezó hace más de cinco años en la secundaria. Empecé a estudiar lenguaje C, que evolucionó en Javascript, acompañado de múltiples conocimientos técnicos.",
-    "quarter_part":"Después llegó el turno de Henry, un bootcamp, que me brindó herramientas en diseño web y desarrollo backend.",
-    "fifth_part": "En 2021 prioricé React y eso me llevo a mi primera experiencia laboral formal, con ya un año a la fecha.",
-    "sixty_part": "Quienes han compartido este camino me describen como una persona proactiva, que busca constantemente aprender más. Soy alguien curioso, que disfruta trabajar en equipo, buscando interacciones positivas."
+    "title": "Sobre mí",
+    "first_part": "Soy Lautaro González, desarrollador Frontend y Fullstack. Trabajo principalmente con React, Next.js y TypeScript en el frontend, React Native en mobile y NestJS sobre Node.js en el backend.",
+    "second_part": "Mi camino empezó en la secundaria estudiando lenguaje C y siguió con JavaScript. Después cursé el bootcamp de Henry, donde sumé herramientas de diseño web y desarrollo backend, y en 2021 empecé a trabajar profesionalmente enfocado en React.",
+    "third_part": "Hoy me desempeño como desarrollador Full-Stack en Konecta. Disfruto del trabajo en equipo, de aprender tecnologías nuevas y de cuidar la calidad del código con herramientas como Sentry y SonarQube.",
+    "languages_title": "Idiomas",
+    "languages_value": "Español nativo · Inglés profesional de trabajo",
+    "focus_title": "Enfoque actual",
+    "focus_value": "Aplicaciones web y mobile con React, Next.js App Router, TypeScript y React Native",
+    "backend_title": "Backend",
+    "backend_value": "NestJS y Node.js con PostgreSQL, MongoDB, Redis y RabbitMQ"
   },
-  "portfolio": {
-    "check": "Mira algo de mi trabajo",
-    "view": "Ver"
+  "experience": {
+    "title": "Experiencia",
+    "intro": "Trayectoria profesional como desarrollador Full-Stack.",
+    "present": "Actualidad",
+    "konecta_role": "Desarrollador Full-Stack",
+    "konecta_period": "Abr 2024 – Actualidad",
+    "grelec_role": "Desarrollador Full-Stack React Native",
+    "grelec_period": "Ago 2023 – Ene 2024",
+    "ctl_role": "Desarrollador Full-Stack",
+    "ctl_period": "Dic 2021 – Ago 2023"
   },
-  "technologies": "Estas son las tecnologias que manejo",
+  "projects": {
+    "title": "Proyectos",
+    "intro": "Una selección de productos y proyectos en los que trabajé.",
+    "featured_label": "Proyecto destacado",
+    "visit": "Visitar tratoagenda.com",
+    "view": "Ver proyecto",
+    "new_tab": "(se abre en una pestaña nueva)",
+    "trato": {
+      "name": "Trato Agenda",
+      "tagline": "Gestión de turnos por WhatsApp sincronizada con Google Calendar.",
+      "description": "Producto web de gestión de turnos: los clientes escriben por WhatsApp, un asistente les propone horarios libres, confirma la reserva y envía un recordatorio. La agenda se sincroniza con Google Calendar.",
+      "setup": "Puesta en marcha: inicio de sesión con Google y escaneo del QR de WhatsApp.",
+      "pricing": "Según su página de precios: primer mes gratis y luego ARS 20.000 por mes."
+    },
+    "recipe": {
+      "name": "Recipe Calendar",
+      "description": "Aplicación web de recetas y calendario desarrollada como proyecto grupal y desplegada en Vercel.",
+      "image_alt": "Captura de la aplicación Recipe Calendar"
+    },
+    "pidogs": {
+      "name": "PI Dogs",
+      "description": "Aplicación de perros hecha con React y Express. Demo publicada en LinkedIn.",
+      "image_alt": "Captura de la aplicación PI Dogs"
+    },
+    "login": {
+      "name": "Login App",
+      "description": "Aplicación de autenticación construida con React. Demo publicada en LinkedIn.",
+      "image_alt": "Captura de la aplicación Login App"
+    },
+    "twitch": {
+      "name": "Twitch App",
+      "description": "Aplicación web tipo Twitch desplegada en Vercel.",
+      "image_alt": "Captura de la aplicación Twitch App"
+    }
+  },
+  "skills": {
+    "title": "Tecnologías",
+    "intro": "Estas son las tecnologías con las que trabajo.",
+    "frontend": "Frontend y Mobile",
+    "backend": "Backend",
+    "data": "Datos e infraestructura",
+    "quality": "Calidad y herramientas"
+  },
   "contact": {
-    "explain": "Escriba su mensaje si quisiear contactar conmigo",
-    "name": "Ingrese su nombre",
-    "email": "Ingrese su mail",
-    "message": "Ingrese su mensaje"
+    "title": "Contacto",
+    "explain": "¿Querés trabajar juntos o tenés una consulta? Escribime y te respondo a la brevedad.",
+    "name": "Nombre",
+    "name_placeholder": "Tu nombre",
+    "email": "Email",
+    "email_placeholder": "tu@email.com",
+    "message": "Mensaje",
+    "message_placeholder": "Contame en qué puedo ayudarte",
+    "submit": "Enviar mensaje",
+    "direct": "También podés escribirme directamente:"
+  },
+  "social": {
+    "title": "Redes y contacto",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "mail": "Email",
+    "resume": "CV"
+  },
+  "footer": {
+    "rights": "Hecho con React, TypeScript y Tailwind CSS.",
+    "back_to_top": "Volver arriba"
   }
 }
