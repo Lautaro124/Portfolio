@@ -14,6 +14,7 @@ export const links: NavLink[] = [
 
 /* Public assets must respect the deploy sub-path (GitHub Pages: /Portfolio/). */
 export const RESUME_URL = `${import.meta.env.BASE_URL}Curriculums.pdf`
+export const RESUME_FILE_NAME = 'CV_Lautaro_Gonzalez_FullStack.pdf'
 
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/lautaro-gabriel-gonzalez/'
 export const GITHUB_URL = 'https://github.com/Lautaro124'

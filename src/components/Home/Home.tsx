@@ -2,7 +2,7 @@ import { RiArrowRightSLine } from 'react-icons/ri'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import { useTranslation } from 'react-i18next'
 import ProfileImage from '../../assets/images/me.webp'
-import { RESUME_URL, primaryButtonClass, secondaryButtonClass } from '../utils'
+import { RESUME_FILE_NAME, RESUME_URL, primaryButtonClass, secondaryButtonClass } from '../utils'
 
 const Home = () => {
   const [t] = useTranslation('global')
@@ -32,7 +32,7 @@ const Home = () => {
             <a href="#contact" className={secondaryButtonClass}>
               {t('home.cta_contact')}
             </a>
-            <a href={RESUME_URL} download className={secondaryButtonClass}>
+            <a href={RESUME_URL} download={RESUME_FILE_NAME} className={secondaryButtonClass}>
               {t('home.cta_resume')}
               <HiOutlineDocumentDownload size={22} aria-hidden />
             </a>
